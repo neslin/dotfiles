@@ -1,0 +1,22 @@
+alias l="exa -l --long --git --icons -a"
+alias v='nvim'
+alias vi='nvim'
+alias vz="vi ~/.zshrc"
+alias vv="vi ~/.config/nvim/init.vim"
+alias cat='batcat'
+
+alias ..="cd .."
+
+alias tailsys="tail -f /var/log/syslog"
+
+alias aplu="apt list --upgradable"
+alias apup="sudo apt update"
+alias apug="sudo apt upgrade"
+alias cdlog='cd /var/log/'
+alias cdnes='cd /home/neslin/'
+
+alias rs='source ~/.zshrc'
+
+alias cz='chezmoi'
+
+z() { z "$@" && l; }
