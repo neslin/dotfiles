@@ -7,7 +7,6 @@ return {
         keys = {
             { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Telescope find files" },
             { "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "Telescope buffers" },
-            
         },
     }
 }
