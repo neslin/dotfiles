@@ -1,6 +1,9 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:$HOME/.cargo/bin:/usr/local/bin:$PATH:/usr/sbin
 
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/python
 
 export EDITOR="/usr/local/bin/nvim"
 

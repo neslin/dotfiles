@@ -4,7 +4,7 @@ vim.keymap.set("n", "<leader><leader>", function()
 	vim.cmd("so")
 end)
 
-vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>e", vim.cmd.NERDTreeFocus)
 vim.keymap.set("n", "<C-s>", vim.cmd.write)
 vim.keymap.set("n", "<C-q>", vim.cmd.quit)
 vim.keymap.set("n", "<leader>x", ":x<CR>")
@@ -23,3 +23,6 @@ vim.keymap.set("n", "<leader>n", vim.cmd.bNext)
 vim.keymap.set("n", "<leader>N", vim.cmd.bprevious)
 
 vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
+vim.keymap.set("n", "<Tab>", vim.cmd.BufferLineCycleNext)
+vim.keymap.set("n", "<leader>q", vim.cmd.bd)
+
