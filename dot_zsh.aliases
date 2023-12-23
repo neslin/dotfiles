@@ -3,9 +3,10 @@ alias l="exa -l --git --icons"
 alias v='nvim'
 alias vi='nvim'
 alias vz="vi ~/.zshrc"
-alias vv="vi ~/.config/nvim/init.vim"
+alias va="vi ~/.zsh.aliases"
+alias vt="vi ~/.tmux.conf"
 alias cat='batcat'
-
+alias vact='. ./bin/activate'
 alias ..="cd .."
 
 alias tailsys="tail -f /var/log/syslog"
