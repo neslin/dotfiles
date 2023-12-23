@@ -72,7 +72,7 @@ return {
                 end)
 
                 require('mason-lspconfig').setup({
-                    ensure_installed = { "black", "pyright", "ruff" },
+                    ensure_installed = { "black", "pyright" },
                     handlers = {
                         lsp_zero.default_setup,
                         lua_ls = function()
