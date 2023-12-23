@@ -72,13 +72,23 @@ return {
                 end)
 
                 require('mason-lspconfig').setup({
-                    ensure_installed = {"black", "pyright", "ruff", "mypy" },
+                    ensure_installed = { "black", "pyright", "ruff" },
                     handlers = {
                         lsp_zero.default_setup,
                         lua_ls = function()
                             -- (Optional) Configure lua language server for neovim
                             local lua_opts = lsp_zero.nvim_lua_ls()
                             require('lspconfig').lua_ls.setup(lua_opts)
+                        end,
+                            ruff_lsp = function()
+                            require'lspconfig'.ruff_lsp.setup{
+                                init_options = {
+                                    settings = {
+                                        -- Any extra CLI arguments for `ruff` go here.
+                                        args = {},
+                                    }
+                                }
+                            }
                         end,
                     }
                 })
