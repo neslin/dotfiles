@@ -23,7 +23,7 @@ alias cz='chezmoi'
 alias cze='chezmoi edit'
 alias czcd='chezmoi cd'
 
-
+alias py3="/usr/bin/python3"
 zl() { z "$@" && l; }
 
 
