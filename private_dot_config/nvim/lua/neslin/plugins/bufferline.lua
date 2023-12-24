@@ -1,7 +1,14 @@
 
 return{
 	{
-		'akinsho/bufferline.nvim'
+		'akinsho/bufferline.nvim',
+        version = "*",
+        opts = {
+            options = {
+                mode = "tabs",
+                separator_style = "padded_slope",
+            }
+        }
 	}
 }
 
