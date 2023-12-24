@@ -4,9 +4,10 @@ vim.keymap.set("n", "<leader><leader>", function()
 	vim.cmd("so")
 end)
 
-vim.keymap.set("n", "<leader>e", vim.cmd.NERDTreeFocus)
+vim.keymap.set("n", "<leader>e", vim.cmd.NvimTreeFocus)
+--vim.keymap.set("n", <;
 vim.keymap.set("n", "<C-s>", vim.cmd.write)
-vim.keymap.set("i", "<C-s>", vim.cmd.write)
+vim.keymap.set("i", "<C-s>", "<Esc><Cmd>write<CR>")
 vim.keymap.set("n", "<C-q>", vim.cmd.quit)
 vim.keymap.set("n", "<leader>x", ":x<CR>")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
@@ -22,8 +23,11 @@ vim.keymap.set("i", "<C-l>", "<Right>")
 
 vim.keymap.set("n", "<leader>n", vim.cmd.bNext)
 vim.keymap.set("n", "<leader>N", vim.cmd.bprevious)
+vim.keymap.set("n", "<leader>t", vim.cmd.tabnew)
 
 vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
 vim.keymap.set("n", "<Tab>", vim.cmd.BufferLineCycleNext)
 vim.keymap.set("n", "<leader>q", vim.cmd.bd)
 
+vim.keymap.set("n", "<leader>ma", vim.cmd.Mason)
+vim.keymap.set("n", "<leader>la", vim.cmd.Lazy)
