@@ -31,3 +31,5 @@ vim.keymap.set("n", "<leader>q", vim.cmd.bd)
 
 vim.keymap.set("n", "<leader>ma", vim.cmd.Mason)
 vim.keymap.set("n", "<leader>la", vim.cmd.Lazy)
+vim.keymap.set("n", "Q", "<nop>")
+vim.keymap.set("n", "q", "<nop>")
