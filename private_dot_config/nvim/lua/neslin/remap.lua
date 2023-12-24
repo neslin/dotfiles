@@ -6,6 +6,7 @@ end)
 
 vim.keymap.set("n", "<leader>e", vim.cmd.NERDTreeFocus)
 vim.keymap.set("n", "<C-s>", vim.cmd.write)
+vim.keymap.set("i", "<C-s>", vim.cmd.write)
 vim.keymap.set("n", "<C-q>", vim.cmd.quit)
 vim.keymap.set("n", "<leader>x", ":x<CR>")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
