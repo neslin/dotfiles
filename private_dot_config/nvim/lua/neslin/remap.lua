@@ -4,9 +4,11 @@ vim.keymap.set("n", "<leader><leader>", function()
 	vim.cmd("so")
 end)
 
-vim.keymap.set("n", "<leader>e", vim.cmd.NvimTreeFocus)
---vim.keymap.set("n", <;
+--vim.keymap.set("n", "<leader>e", vim.cmd.NvimTreeFocus)
+vim.keymap.set("n", "<leader>e", "<Cmd>Neotree filesystem reveal toggle<CR>")
+
 vim.keymap.set("n", "<C-s>", vim.cmd.write)
+
 vim.keymap.set("i", "<C-s>", "<Esc><Cmd>write<CR>")
 vim.keymap.set("n", "<C-q>", vim.cmd.quit)
 vim.keymap.set("n", "<leader>x", ":x<CR>")
