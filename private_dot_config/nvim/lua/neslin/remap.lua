@@ -7,6 +7,9 @@ end)
 --vim.keymap.set("n", "<leader>e", vim.cmd.NvimTreeFocus)
 vim.keymap.set("n", "<leader>e", "<Cmd>Neotree filesystem reveal toggle<CR>")
 
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
 vim.keymap.set("n", "<C-s>", vim.cmd.write)
 
 vim.keymap.set("i", "<C-s>", "<Esc><Cmd>write<CR>")
