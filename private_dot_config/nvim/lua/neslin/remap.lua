@@ -1,7 +1,7 @@
 vim.g.mapleader = " "
 
 vim.keymap.set("n", "<leader><leader>", function()
-    vim.cmd("so")
+	vim.cmd("so")
 end)
 
 vim.keymap.set("n", "<leader>i", "gg=G")
@@ -18,7 +18,7 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("n", "<C-s>", vim.cmd.write)
 
 vim.keymap.set("i", "<C-s>", "<Esc><Cmd>write<CR>")
-vim.keymap.set("n", "<C-q>", vim.cmd.quit)
+vim.keymap.set("n", "<C-Q>", "<cmd>quit!<cr>")
 vim.keymap.set("n", "<leader>x", ":x<CR>")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
