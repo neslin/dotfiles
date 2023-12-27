@@ -3,9 +3,10 @@ vim.g.mapleader = " "
 vim.keymap.set("n", "<leader><leader>", function()
 	vim.cmd("so")
 end)
-
+--Indent file
 vim.keymap.set("n", "<leader>i", "gg=G")
 
+--Keep search terms in the center of screen
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
@@ -23,6 +24,10 @@ vim.keymap.set("n", "<leader>x", ":x<CR>")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "<leader>ap", "=ap")
+
+--Insert new line above/below cursor
+vim.keymap.set("n", "oo", "o<Esc>k")
+vim.keymap.set("n", "OO", "O<Esc>j")
 
 vim.keymap.set("i", "<C-b>", "<Home>")
 vim.keymap.set("i", "<C-e>", "<End>")
