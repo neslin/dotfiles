@@ -26,8 +26,8 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "<leader>ap", "=ap")
 
 --Insert new line above/below cursor
-vim.keymap.set("n", "oo", "o<Esc>k")
-vim.keymap.set("n", "OO", "O<Esc>j")
+vim.keymap.set("n", "oo", "o<Esc>")
+vim.keymap.set("n", "OO", "O<Esc>")
 
 vim.keymap.set("i", "<C-b>", "<Home>")
 vim.keymap.set("i", "<C-e>", "<End>")

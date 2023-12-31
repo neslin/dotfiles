@@ -1,3 +1,5 @@
+vim.cmd([[ colorscheme tokyonight-night ]])
+
 vim.opt.nu = true
 vim.opt.relativenumber = true
 vim.opt.cursorline = true

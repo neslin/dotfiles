@@ -25,6 +25,8 @@ alias cze='chezmoi edit'
 alias czcd='chezmoi cd'
 alias czadd='chezmoi add'
 alias czap='chezmoi apply'
+alias czs='chezmoi status'
+alias czra='chezmoi re-add'
 
 alias py3="/usr/bin/python3"
 
