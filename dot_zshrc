@@ -81,3 +81,6 @@ function apin () {
 source $HOME/.zsh.aliases
 
 eval "$(zoxide init zsh --cmd z)"
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
