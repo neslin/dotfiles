@@ -28,7 +28,6 @@ alias czap='chezmoi apply'
 
 alias py3="/usr/bin/python3"
 
-bindkey '^ ' autosuggest-accept
 
 zl() { z "$@" && l; }
 
