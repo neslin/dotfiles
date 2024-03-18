@@ -1,11 +1,11 @@
-alias ll="exa -l --git --icons -a"
-alias l="exa -l --git --icons"
+alias ll="eza -l --git --icons -a"
+alias l="eza -l --git --icons"
 alias v='nvim'
 alias vi='nvim'
 alias vz="vi ~/.zshrc"
 alias va="vi ~/.zsh.aliases"
 alias vt="vi ~/.tmux.conf"
-alias cat='batcat'
+alias cat='bat'
 alias vact='. ./bin/activate'
 alias ..="cd .."
 
@@ -28,6 +28,7 @@ alias czap='chezmoi apply'
 
 alias py3="/usr/bin/python3"
 
+alias dcc="docker-compose"
 
 zl() { z "$@" && l; }
 
