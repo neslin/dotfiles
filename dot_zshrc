@@ -84,3 +84,10 @@ eval "$(zoxide init zsh --cmd z)"
 bindkey '^ ' autosuggest-accept
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+fzf-and-run-widget() {
+  fzf-history-widget
+  zle accept-line
+}
+zle     -N   fzf-and-run-widget
+bindkey '^R' fzf-and-run-widget
