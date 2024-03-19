@@ -28,7 +28,7 @@ alias czap='chezmoi apply'
 
 alias py3="/usr/bin/python3"
 
-alias dcc="docker-compose
+alias dcc="docker-compose"
 
 zl() { z "$@" && l; }
 
