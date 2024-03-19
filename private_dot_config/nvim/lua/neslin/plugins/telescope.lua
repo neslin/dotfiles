@@ -1,8 +1,9 @@
 return {
     {
-        'nvim-telescope/telescope.nvim', tag = '0.1.5',
+        'nvim-telescope/telescope.nvim',
+        tag = '0.1.5',
         lazy = false,
-        dependencies = { 
+        dependencies = {
             "nvim-lua/plenary.nvim",
             { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
             "nvim-tree/nvim-web-devicons",
@@ -17,8 +18,8 @@ return {
                     mappings = {
                         i = {
                             ["<C-k>"] = actions.move_selection_previous, -- move to prev result
-                            ["<C-j>"] = actions.move_selection_next, -- move to next result
-                            ["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
+                            ["<C-j>"] = actions.move_selection_next,     -- move to next result
+                            ["<leader>fq"] = actions.send_selected_to_qflist + actions.open_qflist,
                         }
                     }
                 }

@@ -5,6 +5,17 @@ require("neslin.settings")
 require("neslin.bufferline-config")
 --require("neslin.luaconf")
 
+local autocmd = vim.api.nvim_create_autocmd
+
+autocmd({ "BufRead", "BufNewFile" }, {
+    pattern = { '*/playbook.yaml',
+
+    },
+    callback = function()
+        vim.opt.filetype = "yaml.ansible"
+    end,
+})
+
 vim.cmd([[
 
 if has("persistent_undo")

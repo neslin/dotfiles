@@ -12,8 +12,17 @@ return {
         config = function()
             require("neo-tree").setup({
                 popup_border_style = "rounded",
+                event_handlers = {
+
+                    {
+                        event = "file_opened",
+                        handler = function(file_path)
+                            require("neo-tree.command").execute({ action = "close" })
+                        end
+                    }
+                }
             })
         end,
-   }
+    }
 
 }
