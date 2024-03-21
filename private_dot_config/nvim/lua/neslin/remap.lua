@@ -29,6 +29,9 @@ vim.keymap.set("n", "<leader>ap", "=ap")
 vim.keymap.set("n", "oo", "o<Esc>k")
 vim.keymap.set("n", "OO", "O<Esc>j")
 
+vim.keymap.set("n", "<C-b>", "<Home>")
+vim.keymap.set("n", "<C-e>", "<End>")
+
 vim.keymap.set("i", "<C-b>", "<Home>")
 vim.keymap.set("i", "<C-e>", "<End>")
 vim.keymap.set("i", "<C-h>", "<Left>")
