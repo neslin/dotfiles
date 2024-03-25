@@ -84,6 +84,8 @@ function apin () {
 
 source $HOME/.zsh.aliases
 
+[ -f ~/.zsh.aliases.local ] && source ~/.zsh.aliases.local
+
 eval "$(zoxide init zsh --cmd z)"
 bindkey '^ ' autosuggest-accept
 
