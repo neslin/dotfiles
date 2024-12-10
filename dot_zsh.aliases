@@ -14,6 +14,7 @@ alias tailsys="tail -f /var/log/syslog"
 alias aplu="apt list --upgradable"
 alias apup="sudo apt update"
 alias apug="sudo apt upgrade"
+alias apugy="sudo apt upgrade -y"
 alias cdlog='cd /var/log/'
 alias cdnes='cd /home/neslin/'
 
