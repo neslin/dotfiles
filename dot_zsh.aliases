@@ -31,6 +31,8 @@ alias py3="/usr/bin/python3"
 
 alias dcc="docker-compose"
 
+alias lg="lazygit"
+
 zl() { z "$@" && l; }
 
 

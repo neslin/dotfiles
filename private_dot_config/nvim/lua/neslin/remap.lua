@@ -45,6 +45,7 @@ vim.keymap.set("n", "<leader>t", vim.cmd.tabnew)
 
 vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
 vim.keymap.set("n", "<Tab>", vim.cmd.BufferLineCycleNext)
+vim.keymap.set("n", "<S-Tab>", vim.cmd.BufferLineCyclePrev)
 vim.keymap.set("n", "<leader>q", vim.cmd.bd)
 
 vim.keymap.set("n", "<leader>ma", vim.cmd.Mason)
