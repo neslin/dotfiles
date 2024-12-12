@@ -54,9 +54,6 @@ vim.keymap.set("n", "<leader>la", vim.cmd.Lazy)
 vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set("n", "q", "<nop>")
 
-vim.keymap.set("n", "<leader>xx", vim.cmd.TroubleToggle)
-vim.keymap.set("n", "<leader>xw", "<Cmd>TroubleToggle workspace_diagnostics<CR>")
-
 vim.keymap.set("v", "<leader>s", [[:%s/\<c-r><c-w>\>/<c-r><c-w>/gi<left><left><left>]])
 
 vim.keymap.set("n", "<leader>D", ":lua Snacks.dashboard.open()<CR>")
