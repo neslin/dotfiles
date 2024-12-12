@@ -7,8 +7,8 @@ require("neslin.bufferline-config")
 
 local autocmd = vim.api.nvim_create_autocmd
 
-autocmd({ "BufRead", "BufNewFile" }, {
-    pattern = { '*/playbook.yaml',
+autocmd({ "bufread", "bufnewfile" }, {
+    pattern = { '*/playbook.yaml', '*/inventory.yaml',
 
     },
     callback = function()
