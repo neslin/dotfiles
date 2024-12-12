@@ -9,20 +9,20 @@ return {
             "MunifTanjim/nui.nvim",
             -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
         },
-        config = function()
-            require("neo-tree").setup({
-                popup_border_style = "rounded",
-                event_handlers = {
-
-                    {
-                        event = "file_opened",
-                        handler = function(file_path)
-                            require("neo-tree.command").execute({ action = "close" })
-                        end
-                    }
-                }
-            })
-        end,
+        --        config = function()
+        --            require("neo-tree").setup({
+        --                popup_border_style = "rounded",
+        --                event_handlers = {
+        --
+        --                    {
+        --                        event = "file_opened",
+        --                        handler = function(file_path)
+        --                            require("neo-tree.command").execute({ action = "close" })
+        --                        end
+        --                    }
+        --                }
+        --            })
+        --        end,
     }
 
 }

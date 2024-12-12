@@ -1,8 +1,6 @@
 vim.g.mapleader = " "
 
-vim.keymap.set("n", "<leader><leader>", function()
-    vim.cmd("so")
-end)
+vim.keymap.set("n", "<leader><leader>", "<cmd>source %<CR>")
 --Indent file
 vim.keymap.set("n", "<leader>i", "gg=G")
 
@@ -10,8 +8,7 @@ vim.keymap.set("n", "<leader>i", "gg=G")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
-vim.keymap.set("n", "<leader>e", vim.cmd.Neotree)
-vim.keymap.set("n", "<leader>E", "<Cmd>Neotree filesystem reveal toggle<CR>")
+vim.keymap.set("n", "<leader>e", "<cmd>Neotree filesystem reveal float toggle<CR>")
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
@@ -20,7 +17,7 @@ vim.keymap.set("n", "<C-s>", vim.cmd.write)
 
 vim.keymap.set("i", "<C-s>", "<Esc><Cmd>write<CR>")
 vim.keymap.set("n", "<C-Q>", "<cmd>quit!<cr>")
-vim.keymap.set("n", "<leader>x", ":x<CR>")
+--vim.keymap.set("n", "<leader>x", ":x<CR>")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "<leader>ap", "=ap")
@@ -43,7 +40,11 @@ vim.keymap.set("n", "<leader>n", vim.cmd.bNext)
 vim.keymap.set("n", "<leader>N", vim.cmd.bprevious)
 vim.keymap.set("n", "<leader>t", vim.cmd.tabnew)
 
-vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
+vim.keymap.set("n", "<leader>u", function()
+    vim.cmd.UndotreeToggle()
+    vim.cmd.UndotreeFocus()
+end)
+
 vim.keymap.set("n", "<Tab>", vim.cmd.BufferLineCycleNext)
 vim.keymap.set("n", "<S-Tab>", vim.cmd.BufferLineCyclePrev)
 vim.keymap.set("n", "<leader>q", vim.cmd.bd)
@@ -56,4 +57,19 @@ vim.keymap.set("n", "q", "<nop>")
 vim.keymap.set("n", "<leader>xx", vim.cmd.TroubleToggle)
 vim.keymap.set("n", "<leader>xw", "<Cmd>TroubleToggle workspace_diagnostics<CR>")
 
-vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+vim.keymap.set("v", "<leader>s", [[:%s/\<c-r><c-w>\>/<c-r><c-w>/gi<left><left><left>]])
+
+vim.keymap.set("n", "<leader>D", ":lua Snacks.dashboard.open()<CR>")
+vim.keymap.set("n", "<leader>x", ":.lua<CR>")
+vim.keymap.set("v", "<leader>x", ":lua<CR>")
+
+-- Highlight when yanking (copying) text
+--  Try it with `yap` in normal mode
+--  See `:help vim.highlight.on_yank()`
+vim.api.nvim_create_autocmd('TextYankPost', {
+    desc = 'Highlight when yanking (copying) text',
+    group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
+    callback = function()
+        vim.highlight.on_yank()
+    end,
+})
