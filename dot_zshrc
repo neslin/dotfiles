@@ -90,7 +90,7 @@ source $HOME/.zsh.aliases
 [ -f ~/.local/bin/zoxide ] && eval "$(zoxide init zsh --cmd z)"
 [ -f /usr/bin/zoxide ] && eval "$(zoxide init zsh --cmd z)"
 [ -f ~/.zsh.aliases.local ] && source ~/.zsh.aliases.local
-[ -f $HOME/.atuin/bin/env && source $HOME/.atuin/env ]
+[ -f $HOME/.atuin/bin/env ] && source $HOME/.atuin/env
 bindkey '^ ' autosuggest-accept
 
 
