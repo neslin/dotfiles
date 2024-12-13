@@ -1,5 +1,6 @@
 return {
     "kylechui/nvim-surround",
+    enable = false,
     version = "*", -- Use for stability; omit to use `main` branch for the latest features
     event = "VeryLazy",
     config = function()
@@ -7,4 +8,4 @@ return {
             -- Configuration here, or leave empty to use defaults
         })
     end
-} 
+}

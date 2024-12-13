@@ -19,6 +19,7 @@ return {
                 graphql = { "prettier" },
                 lua = { "stylua" },
                 python = { "isort", "black" },
+                rust = { "rustfmt", lsp_fallback = "fallback" },
             },
             format_on_save = {
                 lsp_fallback = true,
