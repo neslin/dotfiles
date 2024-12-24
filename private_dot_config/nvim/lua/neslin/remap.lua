@@ -54,12 +54,13 @@ vim.keymap.set("n", "<leader>la", vim.cmd.Lazy)
 vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set("n", "q", "<nop>")
 
-vim.keymap.set("v", "<leader>s", [[:%s/\<c-r><c-w>\>/<c-r><c-w>/gi<left><left><left>]])
+vim.keymap.set("n", "<leader>ss", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
+vim.keymap.set("x", "<leader>s", [[:s/\%V]], { desc = "Find and replace in selection" })
+vim.keymap.set("n", "<leader>f", [[:%s//<left>]], { desc = "Find and replace" })
 vim.keymap.set("n", "<leader>D", ":lua Snacks.dashboard.open()<CR>")
 vim.keymap.set("n", "<leader>x", ":.lua<CR>")
 vim.keymap.set("v", "<leader>x", ":lua<CR>")
-
 -- Highlight when yanking (copying) text
 --  Try it with `yap` in normal mode
 --  See `:help vim.highlight.on_yank()`
