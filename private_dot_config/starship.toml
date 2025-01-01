@@ -3,7 +3,8 @@
 format = """
 $jobs\
 $time\
-$username \
+$username\
+$hostname\
 $directory \
 $git_branch \
 $git_status\
@@ -42,9 +43,15 @@ read_only = " "
 [username]
 style_user = "bright-purple bold"
 style_root = "bright-red bold"
-format = ' [\[](red) [$user\]]($style)'
+format = ' [\[](red) [$user(red)]($style)'
 disabled = false
 show_always = true
+
+[hostname]
+ssh_only = false
+format = '@(red)[$hostname\]](bold red)'
+#trim_at = '.companyname.com'
+disabled = false
 
 [git_status]
 untracked = "[ ](yellow)"
@@ -72,9 +79,3 @@ time_format = "%R"
 # style = "fg:bright-blue bg:black"
 format = '[\[](bold red) [$time](bright-blue) [\]](bold red)($style)'
 
-# [custom.live-clock-icon]
-# command = 'echo "" | cut -c $(($(date +%H)%12+1))'
-# description = "Live updating clock icon, changes hourly. Icons can be customized to your liking."
-# when = true
-# style = "fg:bright-blue bg:black"
-# format = "[$output ]($style)"
