@@ -94,9 +94,6 @@ source $HOME/.zsh.aliases
 
 bindkey '^ ' autosuggest-accept
 
-
-# . "$HOME/.atuin/bin/env"
-
 eval "$(atuin init zsh)"
 eval "$(starship init zsh)"
 

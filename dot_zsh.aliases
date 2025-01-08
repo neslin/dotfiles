@@ -33,6 +33,7 @@ alias py3="/usr/bin/python3"
 alias dcc="docker-compose"
 
 alias lg="lazygit"
+alias se="sudoedit"
 
 zl() { z "$@" && l; }
 
