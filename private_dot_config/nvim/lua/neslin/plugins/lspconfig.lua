@@ -4,9 +4,21 @@ return {
     dependencies = {
         "saghen/blink.cmp",
     },
-    config = function()
-        -- import lspconfig plugin
+    opts = {
+        servers = {
+            lua_ls = {},
+            pyright = {},
+        }
+    },
+    config = function(_, opts)
         local lspconfig = require("lspconfig")
+
+        for server, config in pairs(opts.servers) do
+            -- passing config.capabilities to blink.cmp merges with the capabilities in your
+            -- `opts[server].capabilities, if you've defined it
+            config.capabilities = require('blink.cmp').get_lsp_capabilities(config.capabilities)
+            lspconfig[server].setup(config)
+        end
 
         local keymap = vim.keymap -- for conciseness
 
@@ -74,22 +86,13 @@ return {
         lspconfig["pyright"].setup({
             capabilities = capabilities,
             on_attach = on_attach,
-            settings = {
-                pyright = {
-                    python = {
-                        analysis = {
-                            reportOptionalMemberAccess = "off"
-                        }
-                    }
-                }
-            }
         })
 
-        -- configure ansible
-        lspconfig["ansiblels"].setup({
-            capabilities = capabilities,
-            on_attach = on_attach,
-        })
+        -- -- configure ansible
+        -- lspconfig["ansiblels"].setup({
+        --     capabilities = capabilities,
+        --     on_attach = on_attach,
+        -- })
 
         -- configure lua server (with special settings)
         lspconfig["lua_ls"].setup({
@@ -110,6 +113,7 @@ return {
                     },
                 },
             },
+
             lspconfig.rust_analyzer.setup {
                 -- Server-specific settings. See `:help lspconfig-setup`
                 settings = {
