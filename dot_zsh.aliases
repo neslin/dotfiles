@@ -25,15 +25,18 @@ alias rs='source ~/.zshrc'
 alias cz='chezmoi'
 alias cze='chezmoi edit'
 alias czcd='chezmoi cd'
+alias czra='chezmoi re-add'
+
 alias czadd='chezmoi add'
 alias czap='chezmoi apply'
 
 alias py3="/usr/bin/python3"
 
-alias dcc="docker-compose"
+alias dc="docker-compose"
 
 alias lg="lazygit"
 alias se="sudoedit"
+
 
 zl() { z "$@" && l; }
 
