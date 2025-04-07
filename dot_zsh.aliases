@@ -33,6 +33,7 @@ alias czap='chezmoi apply'
 alias py3="/usr/bin/python3"
 
 alias dc="docker compose"
+alias dcr="docker compose down && docker compose up -d"
 
 alias lg="lazygit"
 alias se="sudoedit"
